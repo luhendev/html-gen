@@ -4,116 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Lucas Henrique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Luhen - Portfólio</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <h1>Seja bem-vindo(a) ao meu portfólio</h1>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Habilidades</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="/pages/lucas.html">Lucas</a></li>
-            </ul>
-        </nav>
+        <div class="header-left">
+            <a href="#" class="logo">Lucas Henrique</a>
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="./index.html" class="active"> Home</a>
+                <a href="./contatos.html" class="active"> Contato</a>
+            </nav>
+            <div class="theme-toggle">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <div class="ball"></div>
+                </label>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section id="sobre-mim">
-            <img src="/images/Lucas.jpg" alt="Minha foto de perfil">
-            <h1>Olá, eu sou Lucas Henrique</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sint perspiciatis accusamus doloribus facere porro saepe similique! Vel voluptatum eaque quis facilis. Nulla repudiandae alias numquam delectus laudantium aspernatur perferendis!.</p>
-        </section>
-
-        <section id="habilidades">
-            <div>
-                <h2>Habilidades</h2>
-                <ul>
-                    <li><span class="destacar">HTML</span></li>
-                    <li><span class="destacar">CSS</span></li>
-                    <li><span class="destacar">JavaScript</span></li>
-                    <li><span class="destacar">Java</span></li>
-                    <li><span class="destacar">Sprint Boot</span></li>
-                </ul>
+        <section class="home">
+            <div class="home-img">
+                <img src="https://i.ibb.co/FXpsBP4/IMG-2904.jpg" alt="Minha foto.">
+            </div>
+            <div class="home-content">
+                <h1>Olá, é o <span>Lucas</span>!</h1>
+                <h3 class="typing-text">Eu sou <span></span></h3>
+                <p>Sou apaixonado por tecnologia e desenvolvimento. Adoro criar soluções criativas e inovadoras para
+                    desafios do dia a dia. Meu objetivo é sempre aprender algo novo e usar esse conhecimento para
+                    impactar positivamente o mundo. Se você gosta de explorar ideias, colaborar em projetos e
+                    compartilhar conhecimento, está no lugar certo!</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/luhens/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/luhendev"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/luhen.ss/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="#" class="btn">Sobre mim</a>
             </div>
         </section>
-
-        <section id="linguagens">
-            <table border="1">
-                <tr>
-                    <th>Linguagem</th>
-                    <th>Nível</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>Inglês</td>
-                    <td>Básico</td>
-                    <td>Em andamento</td>
-                </tr>
-                <tr>
-                    <td>Espanhol</td>
-                    <td>Básico</td>
-                    <td>Não iniciado</td>
-                </tr>
-            </table>
-        </section>
-
-        <section id="projetos">
-            <h2>Projetos</h2>
-            <ol>
-                <li>
-                    <strong>Projeto 1:</strong> Sistema
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempora dolores tenetur
-                        consectetur quis molestias vel, beatae quaerat voluptatem rem labore voluptas doloremque qui eum
-                        odit perferendis officia, asperiores quia! <a href="#">Ver projeto!</a></p>
-                </li>
-                <li>
-                    <strong>Projeto 2:</strong> Sistema
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident facere quam ad deleniti
-                        voluptates, non cumque neque error accusamus, nobis, repellat asperiores officia facilis
-                        voluptate omnis expedita cum doloribus earum? <a href="#"> Ver projeto</a></p>
-                </li>
-            </ol>
-        </section>
-
-        <section id="contato">
-            <h2>Entre em Contato</h2>
-            <p>Email: <a href="https://criarmeulink.com.br/u/1736413859">E-mail</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/luhens/" target="_blank">LinkedIn</a></p>
-            <h2>Formulário</h2>
-            <form>
-                <label>Nome:</label>
-                <input type="text" required><br><br>
-
-                <label>Masculino:</label>
-                <input type="radio">
-                <label>Feminino:</label>
-                <input type="radio"><br><br>
-
-                <label>Número:</label>
-                <input type="number"><br><br>
-
-                <label>Email:</label>
-                <input type="email" required><br><br>
-
-                <label>Mensagem:</label><br>
-                <textarea rows="4" required></textarea><br><br>
-
-                <label>Anexo (opcional):</label>
-                <input type="file"><br><br>
-
-                <button type="submit">Enviar</button>
-            </form>
+        <section class="mysong">
+            <div class="mysong-content">
+                <h1>Minha música favorita!</h1>
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/-hzbImNhuT8" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
         </section>
     </main>
-
     <footer>
-        <p>&copy; 2025 Lucas Henrique Sousa Silva. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Lucas Henrique. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

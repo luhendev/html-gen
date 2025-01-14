@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B");
+
+:root {
+    --primary-background: #dadce1;
+    --second-background: #fff;
+    --blue-highlight: rgb(31, 111, 122);
+    --white-text: rgb(0, 0, 0);
+    --white-color: rgb(255, 255, 255);
+
+    --dark-background: #032137;
+    --dark-second-background: #06395d;
+    --dark-highlight: aqua;
+    --dark-text: #fff;
+    --dark-color: rgb(0, 1, 30);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--primary-background);
+    color: var(--white-text);
+    transition: background 0.2s linear;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
+    height: 20px;
+    width: 40px;
+
+    transform: scale(1.5);
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 15px;
+    width: 15px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(20px);
+}
+
+header {
+    margin-top: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12%;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--blue-highlight);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 2.5rem;
+    color: var(--white-text);
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a:active {
+    color: var(--blue-highlight);
+    border-bottom: 3px solid var(--blue-highlight);
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.home-contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem auto; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.form-title {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.form-title h1 {
+    font-size: 24px; 
+    font-weight: bold; 
+    color: var(--white-text); 
+    margin: 0; 
+    padding: 0; 
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form h1 {
+    text-align: center;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--w);
+    font-size: 1.6rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="number"]:focus,
+form textarea:focus {
+    border-color: var(--blue-highlight);
+    outline: none;
+}
+
+form button[type="submit"] {
+    background-color: var(--blue-highlight);
+    color: var(--second-background);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--dark-second-background);
+}
+
+form input[type="file"] {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+form input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.2);
+}
+
+.form-gender{
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home .home-contato-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: var(--blue-highlight);
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 20px;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    width: 400px;
+    height: 490px;
+    border-radius: 5%;
+    box-shadow: 0 0 25px solid;
+    cursor: pointer;
+    transition: 0.2s linear;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    border: 0.2rem solid var(--blue-highlight);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+    color: var(--white-text);
+}
+
+.social-icons a:hover {
+    color: var(--white-color);
+    transform: scale(1.3) translateY(-5px);
+    background-color: var(--blue-highlight);
+    box-shadow: 0 0 25px var(--blue-highlight);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: var(--primary-background);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--blue-highlight);
+    letter-spacing: 0.3;
+    font-weight: 600;
+    border: 2px solid var(--blue-highlight);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: var(--blue-highlight);
+    color: var(--white-color);
+    box-shadow: 0 0 25px var(--blue-highlight);
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "Desenvolvedor";
+    color: var(--blue-highlight);
+    animation: words 5s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: var(--primary-background);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--primary-background);
+    right: -8;
+    animation: cursor 0.3s infinite;
+    transition: background-color 0.2s linear, border-left 0.2s linear;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid var(--blue-highlight);
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: "Web Developer"
+    }
+
+    21%,
+    40% {
+        content: "Developer"
+    }
+
+    41%,
+    60% {
+        content: "Network Analyst"
+    }
+
+    61%,
+    80% {
+        content: "System Developer"
+    }
+
+    81%,
+    100% {
+        content: "Web Designer"
+    }
+}
+
+.mysong {
+    width: 100%;
+    height: 4vh;
+    padding: 10px;
+    background-color: var(--second-background);
+    display: flex;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mysong-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mysong h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2vh;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 2rem;
+}
+
+
+iframe {
+    border: 10px solid var(--blue-highlight);
+    border-radius: 10px;
+}
+
+body.dark {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+}
+
+body.dark .btn {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+    border: 2px solid --dark-highlight;
+}
+
+body.dark .social-icons a {
+    border: 0.2rem solid var(--dark-highlight);
+    color: var(--dark-text);
+}
+
+body.dark nav a {
+    color: var(--dark-text);
+}
+
+body.dark nav a:hover,
+body.dark nav a:active {
+    color: var(--dark-highlight);
+    border-bottom: 3px solid var(--dark-highlight);
+}
+
+body.dark span {
+    color: var(--dark-highlight);
+}
+
+body.dark .logo {
+    color: var(--dark-highlight);
+}
+
+body.dark .social-icons a:hover {
+    color: var(--dark-color);
+    background-color: var(--dark-highlight);
+    box-shadow: 0 0 25px var(--dark-highlight);
+}
+
+body.dark .btn {
+    background-color: var(--dark-background);
+    color: var(--dark-highlight);
+    border: 2px solid var(--dark-highlight);
+}
+
+body.dark .btn:hover {
+    background-color: var(--dark-highlight);
+    color: var(--dark-color);
+    box-shadow: 0 0 25px var(--dark-highlight);
+}
+
+body.dark .typing-text span::before {
+    color: var(--dark-highlight);
+}
+
+body.dark .typing-text span::after {
+    background-color: var(--dark-background);
+    border-left: 3px solid var(--dark-background);
+    transition: background-color 0.2s linear, border-left 0.2s linear;
+}
+
+body.dark .mysong {
+    background-color: var(--dark-second-background);
+}
+
+body.dark .form-title h1 {
+    color: var(--dark-text); 
+}
+
+body.dark form {
+    background-color: var(--dark-second-background); 
+}
+
+body.dark form label {
+    color: var(--white-color);
+}
+
+body.dark form input[type="text"],
+body.dark form input[type="email"],
+body.dark form input[type="number"],
+body.dark form textarea {
+    border: 1px solid var(--dark-highlight);
+}
+
+body.dark form input[type="text"]:focus,
+body.dark form input[type="email"]:focus,
+body.dark form input[type="number"]:focus,
+body.dark form textarea:focus {
+    border-color: var(--dark-highlight);
+}
+
+body.dark form button[type="submit"] {
+    background-color: var(--second-background);
+    color: var(--dark-background);
+    transition: background-color 0.3s ease;
+}

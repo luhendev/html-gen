@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Luhen - Contato</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <a href="#" class="logo">Lucas Henrique</a>
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="./index.html" class="active"> Home</a>
+                <a href="./contatos.html" class="active"> Contato</a>
+            </nav>
+            <div class="theme-toggle">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <div class="ball"></div>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="home-contato">
+            <div class="home-contato-content">
+                <div class="form-title">
+                    <h1>Formulário para contato!</h1>
+                </div>
+                <br>
+                <form>
+                    <label>Nome:</label>
+                    <input type="text" required><br><br>
+
+                    <div class="form-gender">
+                        <label>Masculino:</label>
+                        <input name="genero" type="radio">
+                        <label>Feminino:</label>
+                        <input name="genero" type="radio"><br><br>
+                    </div>
+
+                    <label>Número:</label>
+                    <input type="number"><br><br>
+
+                    <label>Email:</label>
+                    <input type="email" required><br><br>
+
+                    <label>Mensagem:</label><br>
+                    <textarea rows="4" required></textarea><br><br>
+
+                    <label>Anexo (opcional):</label>
+                    <input type="file"><br><br>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Lucas Henrique. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
